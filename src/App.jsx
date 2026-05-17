@@ -43,7 +43,7 @@ export default function PortfolioPage() {
           </p>
 
           <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6">
-            Hola, soy <span className="text-cyan-400">Tu Nombre</span>
+            Hola, soy <span className="text-cyan-400">Sebastián Castelli</span>
           </h1>
 
           <p className="text-zinc-300 text-lg leading-relaxed mb-8 max-w-xl">
@@ -53,7 +53,7 @@ export default function PortfolioPage() {
 
           <div className="flex flex-wrap gap-4">
             <a
-              href="https://github.com"
+              href="https://github.com/SebaCastelli"
               target="_blank"
               className="px-6 py-3 rounded-2xl bg-cyan-500 text-black font-semibold hover:scale-105 transition"
             >
@@ -61,7 +61,7 @@ export default function PortfolioPage() {
             </a>
 
             <a
-              href="https://linkedin.com"
+              href="https://www.linkedin.com/in/sebastian-castelli/"
               target="_blank"
               className="px-6 py-3 rounded-2xl border border-zinc-700 hover:bg-zinc-900 transition"
             >
@@ -159,7 +159,7 @@ export default function PortfolioPage() {
           </p>
 
           <a
-            href="mailto:tuemail@example.com"
+            href="mailto:cristhiancastelli2012@gmail.com"
             className="inline-block px-8 py-4 rounded-2xl bg-cyan-500 text-black font-bold hover:scale-105 transition"
           >
             Contactarme
@@ -169,7 +169,7 @@ export default function PortfolioPage() {
 
       {/* FOOTER */}
       <footer className="border-t border-zinc-900 py-8 px-6 text-center text-zinc-500">
-        © 2026 — Portfolio Personal
+        © 2026 — Sebastián Castelli
       </footer>
     </div>
   );
