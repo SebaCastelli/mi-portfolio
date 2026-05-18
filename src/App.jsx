@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 export default function PortfolioPage() {
   const projects = [
     {
@@ -71,9 +73,35 @@ export default function PortfolioPage() {
         </div>
 
         <div className="flex justify-center">
-          <div className="w-80 h-80 rounded-3xl bg-gradient-to-br from-cyan-500/30 to-blue-500/20 border border-zinc-800 shadow-2xl flex items-center justify-center text-7xl font-bold">
-            👨‍💻
-          </div>
+          <motion.div
+            animate={{
+              y: [0, -12, 0],
+            }}
+            transition={{
+              duration: 4,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+            whileHover={{
+              scale: 1.08,
+              rotate: 2,
+            }}
+            className="
+              w-80 h-80
+              rounded-3xl
+              overflow-hidden
+              border-2 border-cyan-400/40
+              shadow-[0_0_40px_rgba(34,211,238,0.35)]
+              cursor-pointer
+              transition-all
+            "
+          >
+            <img
+              src="/foto.jpg"
+              alt="foto"
+              className="w-full h-full object-cover"
+            />
+          </motion.div>
         </div>
       </section>
 
