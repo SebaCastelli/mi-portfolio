@@ -36,7 +36,21 @@ export default function PortfolioPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-zinc-950 text-zinc-100 font-sans">
+    <div
+      className="
+        min-h-screen
+        text-stone-100
+        font-sans
+        bg-cover
+        bg-center
+        bg-fixed
+      "
+      style={{
+        backgroundImage: "url('/background.png')",
+      }}
+    >
+    <div className="min-h-screen bg-black/40">
+        
       {/* HERO */}
       <section className="max-w-6xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-12 items-center">
         <div>
@@ -45,7 +59,7 @@ export default function PortfolioPage() {
           </p>
 
           <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6">
-            Hola, soy <span className="text-cyan-400">Sebastián Castelli</span>
+            Hola, soy <span className="text-amber-400">Sebastián Castelli</span>
           </h1>
 
           <p className="text-zinc-300 text-lg leading-relaxed mb-8 max-w-xl">
@@ -57,7 +71,7 @@ export default function PortfolioPage() {
             <a
               href="https://github.com/SebaCastelli"
               target="_blank"
-              className="px-6 py-3 rounded-2xl bg-cyan-500 text-black font-semibold hover:scale-105 transition"
+              className="px-6 py-3 rounded-2xl bg-amber-400 text-black font-semibold hover:scale-105 transition"
             >
               GitHub
             </a>
@@ -65,7 +79,7 @@ export default function PortfolioPage() {
             <a
               href="https://www.linkedin.com/in/sebastian-castelli/"
               target="_blank"
-              className="px-6 py-3 rounded-2xl border border-zinc-700 hover:bg-zinc-900 transition"
+              className="px-6 py-3 rounded-2xl border border-zinc-700 hover:scale-105 transition"
             >
               LinkedIn
             </a>
@@ -90,8 +104,8 @@ export default function PortfolioPage() {
               w-80 h-80
               rounded-3xl
               overflow-hidden
-              border-2 border-cyan-400/40
-              shadow-[0_0_40px_rgba(34,211,238,0.35)]
+              border-2 border-amber-300/40
+              shadow-[0_0_40px_rgba(251,191,36,0.35)]
               cursor-pointer
               transition-all
             "
@@ -107,7 +121,7 @@ export default function PortfolioPage() {
 
       {/* ABOUT */}
       <section className="max-w-6xl mx-auto px-6 py-16">
-        <div className="bg-zinc-900 border border-zinc-800 rounded-3xl p-8 md:p-12 shadow-xl">
+        <div className="bg-zinc-900/70 backdrop-blur-xl border border-zinc-800 rounded-3xl p-8 md:p-12 shadow-xl">
           <h2 className="text-3xl font-bold mb-6">Sobre mí</h2>
 
           <p className="text-zinc-300 leading-relaxed text-lg">
@@ -127,7 +141,7 @@ export default function PortfolioPage() {
           {skills.map((skill) => (
             <div
               key={skill}
-              className="px-5 py-3 rounded-2xl bg-zinc-900 border border-zinc-800 hover:border-cyan-500 transition"
+              className="px-5 py-3 rounded-2xl bg-zinc-900/70 backdrop-blur-xl border border-zinc-800 hover:border-amber-400 transition"
             >
               {skill}
             </div>
@@ -147,7 +161,7 @@ export default function PortfolioPage() {
           {projects.map((project) => (
             <div
               key={project.title}
-              className="bg-zinc-900 border border-zinc-800 rounded-3xl p-6 hover:border-cyan-500 hover:-translate-y-1 transition-all"
+              className="bg-zinc-900/70 backdrop-blur-xl border border-zinc-800 rounded-3xl p-6 hover:border-amber-400 hover:-translate-y-1 transition-all"
             >
               <div className="h-40 rounded-2xl bg-gradient-to-br from-zinc-800 to-zinc-900 mb-6 flex items-center justify-center text-5xl">
                 🚀
@@ -165,7 +179,7 @@ export default function PortfolioPage() {
                 {project.tech.map((tech) => (
                   <span
                     key={tech}
-                    className="text-sm px-3 py-1 rounded-full bg-zinc-800 text-zinc-300"
+                    className="text-sm px-3 py-1 rounded-full bg-zinc-900/70 backdrop-blur-xl text-zinc-300"
                   >
                     {tech}
                   </span>
@@ -178,7 +192,7 @@ export default function PortfolioPage() {
 
       {/* CONTACT */}
       <section className="max-w-6xl mx-auto px-6 py-20">
-        <div className="rounded-3xl bg-gradient-to-r from-cyan-500/10 to-blue-500/10 border border-cyan-500/20 p-10 text-center">
+        <div className="rounded-3xl bg-gradient-to-r from-amber-700/10 to-orange-500/10 border border-amber-500/20 p-10 text-center">
           <h2 className="text-4xl font-bold mb-4">¿Trabajamos juntos?</h2>
 
           <p className="text-zinc-300 max-w-2xl mx-auto mb-8 text-lg">
@@ -188,7 +202,7 @@ export default function PortfolioPage() {
 
           <a
             href="mailto:cristhiancastelli2012@gmail.com"
-            className="inline-block px-8 py-4 rounded-2xl bg-cyan-500 text-black font-bold hover:scale-105 transition"
+            className="inline-block px-8 py-4 rounded-2xl bg-amber-400 text-black font-bold hover:scale-105 transition"
           >
             Contactarme
           </a>
@@ -196,9 +210,10 @@ export default function PortfolioPage() {
       </section>
 
       {/* FOOTER */}
-      <footer className="border-t border-zinc-900 py-8 px-6 text-center text-zinc-500">
+      <footer className="border-t border-zinc-900 py-8 px-6 text-center text-zinc-400">
         © 2026 — Sebastián Castelli
       </footer>
+    </div>
     </div>
   );
 }
