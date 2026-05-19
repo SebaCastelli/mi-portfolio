@@ -5,20 +5,25 @@ export default function PortfolioPage() {
     {
       title: "Dashboard de Gastos",
       description:
-        "Aplicación para analizar gastos personales usando Python, pandas y gráficos interactivos.",
+        "Aplicación para analizar gastos personales usando Python, pandas y gráficos.",
       tech: ["Python", "Pandas", "Streamlit"],
+      github: "https://github.com/SebaCastelli/dashboard-gastos",
+      demo: "https://dashboard-gastos-sebastiancastelli.streamlit.app",
+      srcimg: "public/dashboard.png",
     },
     {
       title: "Bot de Automatización",
       description:
         "Bot que automatiza tareas repetitivas y envía alertas por Telegram.",
       tech: ["Python", "Telegram API", "Automation"],
+      srcimg: "public/bot-automatizacion.png",
     },
     {
       title: "Scraper de Precios",
       description:
         "Herramienta para monitorear precios y generar reportes automáticos.",
       tech: ["BeautifulSoup", "FastAPI", "PostgreSQL"],
+      srcimg: "public/scraper.png",
     },
   ];
 
@@ -163,8 +168,8 @@ export default function PortfolioPage() {
               key={project.title}
               className="bg-zinc-900/70 backdrop-blur-xl border border-zinc-800 rounded-3xl p-6 hover:border-amber-400 hover:-translate-y-1 transition-all"
             >
-              <div className="h-40 rounded-2xl bg-gradient-to-br from-zinc-800 to-zinc-900 mb-6 flex items-center justify-center text-5xl">
-                🚀
+              <div className="h-40 rounded-2xl bg-gradient-to-br from-zinc-800 to-zinc-900 mb-5 flex items-center justify-center text-5xl">
+                <img src={project.srcimg} alt="🎬" />
               </div>
 
               <h3 className="text-2xl font-semibold mb-3">
@@ -184,6 +189,24 @@ export default function PortfolioPage() {
                     {tech}
                   </span>
                 ))}
+              </div>
+
+              <div className="flex py-3 gap-4">
+                <a
+                  href={project.demo}
+                  target="_blank"
+                  className="px-4 py-2 rounded-xl bg-amber-300 text-black font-medium"
+                >
+                  Live Demo
+                </a>
+
+                <a
+                  href={project.github}
+                  target="_blank"
+                  className="px-4 py-2 rounded-xl border border-zinc-700"
+                >
+                  GitHub
+                </a>
               </div>
             </div>
           ))}
